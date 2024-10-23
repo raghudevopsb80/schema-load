@@ -1,5 +1,5 @@
-bash -x
+tail -f /dev/null
 
 for file in $SCHEMA_FILES ; do
-  echo "mysql -h $DB_HOST -u$DB_USER -p$DB_PASS \< /app/db/$file.sql"
+  mysql -h $DB_HOST -u$DB_USER -p$DB_PASS < /app/db/$file.sql
 done
