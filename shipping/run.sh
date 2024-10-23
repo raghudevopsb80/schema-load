@@ -1,4 +1,4 @@
-tail -f /dev/null
+bash -x
 
 for file in $SCHEMA_FILES ; do
   mysql -h $DB_HOST -u$DB_USER -p$DB_PASS < /app/db/$file.sql
